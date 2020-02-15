@@ -1,3 +1,4 @@
+# Data Manipulation Instructions
 ## Data Cleaning
 ### 1. Organize departments by name only by using the **Text to Columns** functionality
 Data > Text to Columns > Select “Delimited” > Select “Other” and typing > Select “Do not import column (Skip).”  
