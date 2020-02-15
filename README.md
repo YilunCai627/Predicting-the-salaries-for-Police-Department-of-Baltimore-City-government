@@ -10,7 +10,7 @@ Whether we can make predictions about the salaries for a specific agency or type
 ### 2. Data Questions
 In this study, we work with [Baltimore City government open salary data](https://data.baltimorecity.gov) to perform linear regression analysis. How can we evaluate the effectiveness and robustness of our models? What are the metrics that we care about for interpreting the result of our prediction models? More specifically, how to interpret the results of linear regression statistics in order to get some insights for Baltimore City government current operations?  
 
-The original data were exported from the Baltimore City Open Data portal as [CSV documents]() by fiscal years, and the processed version [Excel document]() in this repository is aggregated by department in Baltimore City government.
+The original data were exported from the Baltimore City Open Data portal as [CSV documents](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/tree/master/original_data) by fiscal years, and the processed version [Excel document](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/blob/master/processed_data_agg_dept.xlsx) in this repository is aggregated by department in Baltimore City government.
 ### 3. Data Analysis Tools
 A linear regression analysis can facilitate us make predictions about variables based on existing data and further precisely describe specific trends and potential relationships between phenomena.  
 
@@ -24,16 +24,16 @@ R-Squared value shows how well our selected independent variable(s) explain the 
 The p-value for each independent variable tests the null hypothesis that the coefficient is equal to zero (no effect). Simply put, a predictor that has a low p-value is likely to be a meaningful addition to the model.
 ### 4. Data Answers
 Intuitively, length of employment in Police Department of Baltimore City government might be a reliable indicator for employees' annual salary. To verify this idea, simple Linear regression model is conducted, and the chart below makes this relationship convincingly. This model fit our data with an R2 value of 0.761 and a standard error of residual of $5,757. 
-![]()  
+![](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/raw/master/linear_reg_images/Length%20of%20employment%20versus%20annual%20salary.png)  
 In addition to the annual salary as determined on their contracts, we are also interested in what the Baltimore Police Department actually pays their employees and how they might want to think through budgeting for salaries in the department. However, if we perform the same analysis with the GROSS column data (the actual payout for the employee’s salary from the department), we see a very different output. This model fit our data with an R2 value of only 0.007 and a untolerable large standard error of residual.
-![]()  
+![](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/raw/master/linear_reg_images/Length%20of%20employment%20versus%20Gross%20salary%20(Baltimore%20Police%20Department).png)  
 
 It turns out that the years work for Police Department is not a good predictor of Gross salary, and that there might be other independent variables that actually determine how much an employee gets paid in a given fiscal year.  
 
 How can we better determine a model for predicting the employee’s gross salary? More specifically, the overpaid percent of salary (**overpaid_PCT** = (gross - annual_rt / annual_rt)*100%) is introduced as a new independent variable, and together with employment length to help predict the Gross salary.
 
 Next, we model a multiple linear regression equation to explore other factors related to Gross salary. Campared the R squared value of the result with the previous simple linear regression analysis, it is clear that our new model is more robust. Now, the R2 value is 0.893 and the standard error of residual of approximately $11,170.
-![]()
+![](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/raw/master/linear_reg_images/SLR%20versus%20MLR.png)
 ### 5. Industry Answers
 With simple linear regression model, we notice that the employment length performs relatively well in the prediction of annual salary of police officers in Baltimore City government. However, this predictor doesn’t give us much information about the trend of gross salary. 
 
@@ -44,12 +44,12 @@ Therefore, we recognize that there might be other independent variables that act
 
 
 ## Data Manipulation Instructions
-Want to learn more details about data manipulation in Excel to clean complex dataset and conduct linear regression analysis? Click [***here***]() for a simple step-by-step instructions!  
+Want to learn more details about data manipulation in Excel to clean complex dataset and conduct linear regression analysis? Click [***here***](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/blob/master/Data%20Manipulation%20Instructions.md) for a simple step-by-step instructions!  
 
 ## Data Sources
 * [Baltimore City open salary data](https://data.baltimorecity.gov/browse?category=City+Government)
 * [Aggregated Baltimore City salary data for fiscal years 2011-2019](https://github.com/jhu-decision-analytics/multiple-linear-regression-excel-example)
-* [Integrated data of the Baltimore Police Department employees for Fiscal Year 2018](加链接！！)
+* [Integrated data of the Baltimore Police Department employees](https://github.com/YilunCai627/Predicting-the-salaries-for-Police-Department-of-Baltimore-City-government-/blob/master/processed_data_agg_dept.xlsx)
 * [Description of Baltimore City governmeny salary data](https://data.baltimorecity.gov/browse?category=City+Government)
 
 
